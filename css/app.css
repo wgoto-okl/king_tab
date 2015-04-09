@@ -62,3 +62,20 @@ img#okl-logo {
     width: 100px;
     display: block;
 }
+
+#event {
+    position: fixed;
+    right: 0;
+    bottom: 10%;
+    max-width: 200px;
+    margin-right: 4px;
+    padding: 5px;
+}
+
+#event-title {
+    font-size: 20px;
+}
+
+#event-description {
+    font-size: 14px;
+}

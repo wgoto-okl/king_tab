@@ -12,13 +12,12 @@ King Tab is a One Kings Lane Google Chrome extension for replacing the default n
 
 ## Features
 
-* Randomly select event
-* Set event image as background
+* ~~Randomly select event~~
+* ~~Set event image as background~~
 * Widget to link to event page
-* OKL logo on top left
-* Welcome message
-* Clock
-
+* ~~OKL logo on top left~~
+* ~~Welcome message~~
+* ~~Clock~~
 * Refresh button for a new event
 * Search
 * Blog integration
