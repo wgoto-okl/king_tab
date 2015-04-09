@@ -19,7 +19,13 @@ var kingTab = (function (_$) {
 
     var eventElements = {
         eventTitle: $('#event-title'),
-        eventDescription: $('#event-description')
+        eventDescription: $('#event-description'),
+        eventDialog: $('#event-dialog'),
+        eventContainer: $('#event'),
+        eventDialogTitle: $('#event-dialog-title'),
+        eventDialogImage: $('#event-dialog-image'),
+        eventDialogUrl: $('.event-dialog-url'),
+        eventDialogProducts: $('#event-dialog-products')
     }
 
     return {
@@ -28,6 +34,13 @@ var kingTab = (function (_$) {
             this.setBackgroundImage(this.currentEvent.event_id);
             this.setMessages(textElements);
             this.setEvent(eventElements, this.currentEvent);
+
+            eventElements.eventContainer.on('mouseover', function() {
+                eventElements.eventDialog.show();
+            });
+            eventElements.eventContainer.on('mouseout', function() {
+                eventElements.eventDialog.hide();
+            });
         },
 
         setBackgroundImage: function (eventId) {
@@ -77,9 +90,28 @@ var kingTab = (function (_$) {
             });
         },
 
+        fullBleedImageUrl: function(eventId) {
+            return "https://okl-scene7.insnw.net/is/image/OKL/fullbleed_" + eventId + "?$story-full-bleed$";
+        },
+
         setEvent: function(ems, currentEvent) {
             $(ems.eventTitle).html(currentEvent.event_title);
             $(ems.eventDescription).html(currentEvent.event_description);
+            $(ems.eventDialogTitle).html(currentEvent.event_title);
+            $(ems.eventDialogImage).attr("src", this.fullBleedImageUrl(this.currentEvent.event_id));
+            $(ems.eventDialogUrl).attr("href", this.eventUrl(this.currentEvent.event_id));
+
+            this.setEventProducts(ems, currentEvent);
+        },
+
+        setEventProducts: function(ems, currentEvent) {
+            var allProducts = "";
+            var productTemplate = "<div><a href='#LINK_URL'><img src='#IMG_URL'/></a></div>";
+
+            for (var i=0, len = currentEvent.products.length; i < len; i++) {
+                allProducts += productTemplate.replace('#LINK_URL', 'http://onekingslane.com').replace('#IMG_URL', 'https://okl-scene7.insnw.net/is/image/OKL/Product_GOH11516_Image_1?wid=60&hei=41');
+            }
+            $(ems.eventDialogProducts).html(allProducts);
         }
 
     };

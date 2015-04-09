@@ -22,3 +22,4 @@ King Tab is a One Kings Lane Google Chrome extension for replacing the default n
 * Search
 * Blog integration
 * Instagram feed
+* Random messages such as TGIF,
