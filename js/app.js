@@ -14,7 +14,7 @@ var kingTab = (function (_$) {
 
     var textElements = {
         welcome: $('#welcome-message'),
-        clock: $('#clock'),
+        clock: $('#clock')
     };
 
     var eventElements = {
@@ -66,13 +66,22 @@ var kingTab = (function (_$) {
 
         setMessages: function (ems) {
             $(ems.welcome).html('Good '+DateHelper.getTimeOfTheDayGreeting());
-            $(ems.clock).html(DateHelper.getCurrentTime());
+            this.setTime(ems.clock);
+        },
+
+        setTime: function (clock) {
+            var callee = arguments.callee;
+            clock.html(DateHelper.getCurrentTime());
+            requestAnimationFrame(function () {
+                callee(clock);
+            });
         },
 
         setEvent: function(ems, currentEvent) {
             $(ems.eventTitle).html(currentEvent.event_title);
             $(ems.eventDescription).html(currentEvent.event_description);
         }
+
     };
 })($);
 
