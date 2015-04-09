@@ -40,8 +40,8 @@ input[type="text"] {
     background: transparent;
     border-bottom: 1px solid rgba(255,255,255,0.5);
     outline: none;
-    margin: 10px;
-    padding: 4px 2px;
+    margin: 0;
+    padding: 0;
     color: white;
 }
 
@@ -78,4 +78,9 @@ img#okl-logo {
 
 #event-description {
     font-size: 14px;
+}
+
+#search-input {
+    border-bottom: 1px solid #FFF;
+    width: 100px;
 }

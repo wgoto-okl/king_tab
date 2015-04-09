@@ -1,4 +1,4 @@
-var kingTab = (function (_$) {
+var kingTab = (function (window, $) {
     var IMAGE_CONFIG = {
         wid: 1656,
         hei: 1128,
@@ -20,7 +20,9 @@ var kingTab = (function (_$) {
     var eventElements = {
         eventTitle: $('#event-title'),
         eventDescription: $('#event-description')
-    }
+    };
+
+    var baseUrl = 'https://www.onekingslane.com/';
 
     return {
         init: function () {
@@ -28,6 +30,7 @@ var kingTab = (function (_$) {
             this.setBackgroundImage(this.currentEvent.event_id);
             this.setMessages(textElements);
             this.setEvent(eventElements, this.currentEvent);
+            this.createEventHandlers();
         },
 
         setBackgroundImage: function (eventId) {
@@ -61,7 +64,7 @@ var kingTab = (function (_$) {
         },
 
         eventUrl: function (eventId) {
-            return 'https://www.onekingslane.com/sales/' + eventId;
+            return baseUrl + 'sales/' + eventId;
         },
 
         setMessages: function (ems) {
@@ -80,10 +83,18 @@ var kingTab = (function (_$) {
         setEvent: function(ems, currentEvent) {
             $(ems.eventTitle).html(currentEvent.event_title);
             $(ems.eventDescription).html(currentEvent.event_description);
-        }
+        },
 
+        createEventHandlers: function () {
+            var input = $('#search-input');
+            input.keydown(function (event) {
+                if (event.keyCode === 13) {
+                    window.location = baseUrl + 'search?q=' + input.val().replace(/\s/g, '+');
+                }
+            });
+        }
     };
-})($);
+})(window, $);
 
 $(document).on('ready',function () {
     kingTab.init();
