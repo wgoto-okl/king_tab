@@ -1,13 +1,22 @@
-html {
-    background: url('') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+@font-face {
+    font-family: 'ProximaNova';
+    src: url('../fonts/ProximaNova/ProximaNova-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'ProximaNovaLight';
+    src: url('../fonts/ProximaNova/ProximaNova-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'ProximaNovaBold';
+    src: url('../fonts/ProximaNova/ProximaNova-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'ProximaNovaSemiBold';
+    src: url('../fonts/ProximaNova/ProximaNova-Semibold.ttf') format('truetype');
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'ProximaNova',sans-serif;
     color: white;
     margin: 0 auto;
     width: 100%;
@@ -43,6 +52,8 @@ input[type="text"]:focus {
 #wrapper {
     width: 100%;
     height: 100%;
+    -webkit-background-size: 100%;
+    box-shadow: inset 0 0 50px 0px rgba(0,0,0,0.5);
 }
 
 img#okl-logo {
