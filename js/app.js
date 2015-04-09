@@ -12,6 +12,8 @@ var kingTab = (function (_$) {
         fit: ['fit', 1]
     };
 
+    var BG_NUM = 1;
+
     var textElements = {
         welcome: $('#welcome-message'),
         clock: $('#clock')
@@ -30,8 +32,18 @@ var kingTab = (function (_$) {
             this.setEvent(eventElements, this.currentEvent);
         },
 
+        refresh: function () {
+            BG_NUM++;
+            this.init();
+        },
+
         setBackgroundImage: function (eventId) {
-            $('#wrapper').css('background-image','url("' + this.imageUrl(eventId) + '")');
+            var BG_TEMPLATE = $('<div id="bg'+BG_NUM+'" class="background"></div>');
+            $('body').prepend($(BG_TEMPLATE).attr('id','bg'+BG_NUM));
+            $('#bg'+BG_NUM).css({'zIndex':(0-BG_NUM),'background-image':'url("' + this.imageUrl(eventId) + '")'});
+            $('#bg'+(BG_NUM-1)).fadeOut(function () {
+                this.remove();
+            });
         },
 
         imageUrlParams: function () {
@@ -87,4 +99,8 @@ var kingTab = (function (_$) {
 
 $(document).on('ready',function () {
     kingTab.init();
+
+    $('#refresh').on('click',function () {
+        kingTab.refresh();
+    });
 });

@@ -23,6 +23,7 @@ body {
     margin: 0 auto;
     width: 100%;
     height: 100%;
+    position: relative;
 }
 
 body * {
@@ -46,28 +47,51 @@ input[type="text"] {
     background: transparent;
     border-bottom: 1px solid rgba(255,255,255,0.5);
     outline: none;
-    margin: 10px;
-    padding: 4px 2px;
+    margin: 10px 10px 10px 0.33em;
+    padding: 4px 2px 4px 24px;
     color: white;
-    transition: border-bottom 0.3s ease;
+    transition: border-bottom 0.2s ease, background-color 0.2s ease;
 }
 
 input[type="text"]:focus {
     border-bottom: 1px solid rgba(255,255,255,0.67);
+    background-color: rgba(0,0,0,0.05);
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url('') no-repeat center fixed;
+    -webkit-background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #wrapper {
     width: 100%;
     height: 100%;
-    background: url('') no-repeat center fixed;
-    -webkit-background-size: cover;
-    background-repeat: no-repeat;
     box-shadow: inset 0 0 50px 0px rgba(0,0,0,0.5);
 }
 
-img#okl-logo {
-    margin: 20px auto;
+#okl-logo {
     display: block;
+    position: fixed;
+    left: 50%;
+    top: 50px;
+    -webkit-transform: translateX(-192px);
+}
+
+#search-wrap {
+    position: fixed;
+    top: 0.33em;
+    left: 0.33em;
+}
+
+#search-wrap svg {
+    position: absolute;
+    top: 50%;
+    left: 0.33em;
+    -webkit-transform: translateY(-12px);
 }
 
 #welcome-message {
@@ -91,8 +115,14 @@ img#okl-logo {
     display: block;
 }
 
-#refresh svg path {
+#search-wrap svg path, #refresh svg path {
     fill: white;
+}
+
+#blog {
+    position: fixed;
+    bottom: 50%;
+    right: 0.33em;
 }
 
 #event {
@@ -109,4 +139,10 @@ img#okl-logo {
 
 #event-description {
     font-size: 14px;
+}
+
+#instagram {
+    position: fixed;
+    bottom: 50%;
+    left: 0.33em;
 }
