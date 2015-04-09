@@ -171,12 +171,6 @@ input[type="text"]:focus {
     padding: 5px;
 }
 
-#search-input {
-    border-bottom: 1px solid #FFF;
-    width: 100px;
-}
-}
-
 #instagram {
     position: fixed;
     bottom: 50%;

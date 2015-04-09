@@ -27,8 +27,7 @@ var EventsManager = (function() {
     {
       event_id: "17944",
       event_title: "NESPRESSO",
-      event_description: "Nespresso began with a simple but revolutionary idea: Create the perfect cup of espresso. Now you can get that exquisite crema, tantalizing aroma, and full-bodied taste in your own home&mdash;just like a skilled barista. Better yet, with your purchase you'll receive a $100 credit to buy additional Nespresso products. The perfect cup awaits."
-      event_description: "Nespresso began with a simple but revolutionary idea: Create the perfect cup of espresso. Now you can get that exquisite crema, tantalizing aroma, and full-bodied taste in your own home—just like a skilled barista. Better yet, with your purchase you'll receive a $100 credit to buy additional Nespresso products. The perfect cup awaits.",
+      event_description: "Nespresso began with a simple but revolutionary idea: Create the perfect cup of espresso. Now you can get that exquisite crema, tantalizing aroma, and full-bodied taste in your own home&mdash;just like a skilled barista. Better yet, with your purchase you'll receive a $100 credit to buy additional Nespresso products. The perfect cup awaits.",
       products: [
         {
           okl_sku: 'GOH11516',
