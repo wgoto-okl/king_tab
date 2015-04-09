@@ -31,7 +31,7 @@ var kingTab = (function (_$) {
         },
 
         setBackgroundImage: function (eventId) {
-            $('html').css('background-image','url("' + this.imageUrl(eventId) + '")');
+            $('#wrapper').css('background-image','url("' + this.imageUrl(eventId) + '")');
         },
 
         imageUrlParams: function () {
