@@ -4,7 +4,7 @@
   "version": "0.2",
   "incognito": "split",
   "chrome_url_overrides": {
-    "newtab": "blank.html"
+    "newtab": "dashboard.html"
   },
   "manifest_version": 2
 }
