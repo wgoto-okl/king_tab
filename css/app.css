@@ -17,8 +17,21 @@
     src: url('../fonts/ProximaNova/ProximaNova-Semibold.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'MillerBanner';
+    src: url('../fonts/Miller/Miller-Banner-Roman-01.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'MillerBanner-Light';
+    src: url('../fonts/Miller/Miller-Banner-Light-01.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'MillerBanner-Semibold';
+    src: url('../fonts/Miller/Miller-Banner-Semibold-01.ttf') format('truetype');
+}
+
 body {
-    font-family: 'ProximaNovaLight',sans-serif;
+    font-family: 'ProximaNova',sans-serif;
     color: white;
     margin: 0 auto;
     width: 100%;
@@ -28,6 +41,7 @@ body {
 
 body * {
     -webkit-box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
 }
 
 .clear {
@@ -37,6 +51,10 @@ body * {
 ul {
     list-style-type: none;
     padding: 0px;
+}
+
+.title {
+    font-family: 'MillerBanner',serif;
 }
 
 .tshadow {
@@ -65,7 +83,7 @@ input[type="text"]:focus {
 }
 
 ::-webkit-input-placeholder {
-    color: rgba(255,255,255,0.67);
+    color: rgba(255,255,255,0.75);
 }
 
 #search-input {
