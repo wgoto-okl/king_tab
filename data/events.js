@@ -24,7 +24,6 @@ var EventsManager = (function() {
         }
       ]
     },
-
     {
       event_id: "17944",
       event_title: "NESPRESSO",
@@ -118,8 +117,6 @@ var EventsManager = (function() {
         }
       ]
     }
-
-
   ];
 
   return {

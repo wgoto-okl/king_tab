@@ -16,7 +16,7 @@
 }
 
 body {
-    font-family: 'ProximaNova',sans-serif;
+    font-family: 'ProximaNovaLight',sans-serif;
     color: white;
     margin: 0 auto;
     width: 100%;
@@ -37,7 +37,11 @@ ul {
 }
 
 .tshadow {
-    text-shadow: 0 0 10px #aaa;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.shadowed {
+    -webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));
 }
 
 input[type="text"] {
@@ -48,6 +52,7 @@ input[type="text"] {
     margin: 10px;
     padding: 4px 2px;
     color: white;
+    transition: border-bottom 0.3s ease;
 }
 
 input[type="text"]:focus {
@@ -64,8 +69,33 @@ input[type="text"]:focus {
 }
 
 img#okl-logo {
-    width: 100px;
+    margin: 20px auto;
     display: block;
+}
+
+#welcome-message {
+    position: fixed;
+    top: 0.33em;
+    right: 0.33em;
+    font-size: 1.5em;
+}
+
+#clock {
+    position: fixed;
+    top: 1.83em;
+    right: 0.33em;
+    font-size: 1.25em;
+}
+
+#refresh {
+    position: fixed;
+    top: 0.33em;
+    right: 15em;
+    display: block;
+}
+
+#refresh svg path {
+    fill: white;
 }
 
 #event {
@@ -74,6 +104,9 @@ img#okl-logo {
     bottom: 10%;
     max-width: 400px;
     margin-right: 4px;
+    right: 0.33em;
+    bottom: 0.33em;
+    max-width: 400px;
     padding: 5px;
 }
 
