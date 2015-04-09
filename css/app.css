@@ -63,6 +63,10 @@ input[type="text"]:focus {
     background-color: rgba(0,0,0,0.05);
 }
 
+#search-input {
+    width: 170px;
+}
+
 .background {
     width: 100%;
     height: 100%;
