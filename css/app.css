@@ -34,6 +34,11 @@ body * {
     clear: both;
 }
 
+ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
 .tshadow {
     text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
@@ -129,7 +134,7 @@ input[type="text"]:focus {
     position: fixed;
     right: 0.33em;
     bottom: 0.33em;
-    max-width: 200px;
+    max-width: 400px;
     padding: 5px;
 }
 
@@ -139,6 +144,37 @@ input[type="text"]:focus {
 
 #event-description {
     font-size: 14px;
+}
+
+#event-dialog {
+    display: none;
+    background-color: white;
+    padding: 10px 0;
+    text-align: center;
+    color: #000000;
+}
+
+#event-dialog li {
+    padding: 5px;
+}
+
+#event-dialog-image {
+    max-width: 300px;
+}
+
+#event-dialog-products {
+    display: flex;
+    justify-content: space-around;
+}
+
+#event-dialog-products li {
+    padding: 5px;
+}
+
+#search-input {
+    border-bottom: 1px solid #FFF;
+    width: 100px;
+}
 }
 
 #instagram {
