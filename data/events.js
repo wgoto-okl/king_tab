@@ -4,13 +4,12 @@ var EventsManager = (function() {
     {
       event_id: "51749",
       event_title: "Ocean View",
-      event_description: "You don’t have to live by the sea to soak up its natural beauty. From sweeping seascapes to sculptural accents, these pieces will be a breath of fresh salt air in any space."
+      event_description: "You don't have to live by the sea to soak up its natural beauty. From sweeping seascapes to sculptural accents, these pieces will be a breath of fresh salt air in any space."
     },
-
     {
       event_id: "17944",
       event_title: "NESPRESSO",
-      event_description: "Nespresso began with a simple but revolutionary idea: Create the perfect cup of espresso. Now you can get that exquisite crema, tantalizing aroma, and full-bodied taste in your own home—just like a skilled barista. Better yet, with your purchase you’ll receive a $100 credit to buy additional Nespresso products. The perfect cup awaits."
+      event_description: "Nespresso began with a simple but revolutionary idea: Create the perfect cup of espresso. Now you can get that exquisite crema, tantalizing aroma, and full-bodied taste in your own home—just like a skilled barista. Better yet, with your purchase you'll receive a $100 credit to buy additional Nespresso products. The perfect cup awaits."
     },
 
     {
@@ -25,11 +24,9 @@ var EventsManager = (function() {
     },
     {
       event_id: "51734",
-      event_title: "What’s not to love about blue and white?",
-      event_description: "Both fresh and timeless, it’s a pairing that works with any style. Shop this collection of art, furniture, and more to infuse your own space with this power palette."
+      event_title: "What's not to love about blue and white?",
+      event_description: "Both fresh and timeless, it'’'s a pairing that works with any style. Shop this collection of art, furniture, and more to infuse your own space with this power palette."
     }
-
-
   ];
 
   return {

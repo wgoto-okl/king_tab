@@ -20,7 +20,7 @@ var kingTab = (function (_$) {
     var eventElements = {
         eventTitle: $('#event-title'),
         eventDescription: $('#event-description')
-    }
+    };
 
     return {
         init: function () {
