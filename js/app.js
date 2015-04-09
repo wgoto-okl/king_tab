@@ -1,7 +1,7 @@
 var kingTab = (function (_$) {
     var IMAGE_CONFIG = {
-        wid: 2880,
-        hei: 1800,
+        wid: 1656,
+        hei: 1128,
         fmt: 'jpeg',
         qlt: [90, 0],
         op_sharpen: 0,
@@ -24,7 +24,7 @@ var kingTab = (function (_$) {
         },
 
         setBackgroundImage: function (eventId) {
-            $('#wrapper').css('background','url("' + this.imageUrl(eventId) + '") no-repeat center fixed');
+            $('html').css('background-image','url("' + this.imageUrl(eventId) + '")');
         },
 
         imageUrlParams: function () {
@@ -59,7 +59,15 @@ var kingTab = (function (_$) {
 
         setMessages: function (ems) {
             $(ems.welcome).html('Good '+DateHelper.getTimeOfTheDayGreeting());
-            $(ems.clock).html(DateHelper.getCurrentTime());
+            this.setTime(ems.clock);
+        },
+
+        setTime: function (clock) {
+            var callee = arguments.callee;
+            clock.html(DateHelper.getCurrentTime());
+            requestAnimationFrame(function () {
+                callee(clock);
+            });
         }
     };
 })($);
