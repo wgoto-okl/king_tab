@@ -59,7 +59,15 @@ var kingTab = (function (_$) {
 
         setMessages: function (ems) {
             $(ems.welcome).html('Good '+DateHelper.getTimeOfTheDayGreeting());
-            $(ems.clock).html(DateHelper.getCurrentTime());
+            this.setTime(ems.clock);
+        },
+
+        setTime: function (clock) {
+            var callee = arguments.callee;
+            clock.html(DateHelper.getCurrentTime());
+            requestAnimationFrame(function () {
+                callee(clock);
+            });
         }
     };
 })($);
