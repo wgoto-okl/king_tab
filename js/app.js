@@ -17,10 +17,17 @@ var kingTab = (function (_$) {
         clock: $('#clock')
     };
 
+    var eventElements = {
+        eventTitle: $('#event-title'),
+        eventDescription: $('#event-description')
+    }
+
     return {
         init: function () {
-            this.setBackgroundImage(EventsManager.getRandomEvent().event_id);
+            this.currentEvent = EventsManager.getRandomEvent();
+            this.setBackgroundImage(this.currentEvent.event_id);
             this.setMessages(textElements);
+            this.setEvent(eventElements, this.currentEvent);
         },
 
         setBackgroundImage: function (eventId) {
@@ -68,7 +75,13 @@ var kingTab = (function (_$) {
             requestAnimationFrame(function () {
                 callee(clock);
             });
+        },
+
+        setEvent: function(ems, currentEvent) {
+            $(ems.eventTitle).html(currentEvent.event_title);
+            $(ems.eventDescription).html(currentEvent.event_description);
         }
+
     };
 })($);
 
