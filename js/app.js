@@ -12,9 +12,15 @@ var kingTab = (function (_$) {
         fit: ['fit', 1]
     };
 
+    var textElements = {
+        welcome: $('#welcome-message'),
+        clock: $('#clock')
+    };
+
     return {
         init: function () {
             this.setBackgroundImage(EventsManager.getRandomEvent().event_id);
+            this.setMessages(textElements);
         },
 
         setBackgroundImage: function (eventId) {
@@ -49,6 +55,11 @@ var kingTab = (function (_$) {
 
         eventUrl: function (eventId) {
             return 'https://www.onekingslane.com/sales/' + eventId;
+        },
+
+        setMessages: function (ems) {
+            $(ems.welcome).html('Good '+DateHelper.getTimeOfTheDayGreeting());
+            $(ems.clock).html(DateHelper.getCurrentTime());
         }
     };
 })($);
