@@ -1,7 +1,7 @@
 var kingTab = (function (_$) {
     var IMAGE_CONFIG = {
-        wid: 1800,
-        hei: 2880,
+        wid: 2880,
+        hei: 1800,
         fmt: 'jpeg',
         qlt: [90, 0],
         op_sharpen: 0,
@@ -14,11 +14,11 @@ var kingTab = (function (_$) {
 
     return {
         init: function () {
-
+            this.setBackgroundImage(EventsManager.getRandomEvent().event_id);
         },
 
         setBackgroundImage: function (eventId) {
-
+            $('#wrapper').css('background','url("' + this.imageUrl(eventId) + '") no-repeat center fixed');
         },
 
         imageUrlParams: function () {
@@ -52,3 +52,7 @@ var kingTab = (function (_$) {
         }
     };
 })($);
+
+$(document).on('ready',function () {
+    kingTab.init();
+});
