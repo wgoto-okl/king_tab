@@ -30,7 +30,8 @@ var kingTab = (function (window, $) {
         eventDialogProducts: $('#event-dialog-products')
     };
 
-    var baseUrl = 'https://www.onekingslane.com/';
+    var baseUrl = 'https://www.onekingslane.com/',
+        scene7BaseUrl = 'https://okl-scene7.insnw.net/is/image/OKL/';
 
     return {
         init: function () {
@@ -92,6 +93,15 @@ var kingTab = (function (window, $) {
             return baseUrl + 'sales/' + eventId;
         },
 
+        productEventUrl: function(eventId, productId) {
+            return baseUrl + 'product/' + eventId + "/" + productId;
+        },
+
+        productImageUrl: function(product) {
+            return scene7BaseUrl + "Product_" + product.okl_sku + "_Image_1?wid=160&hei=109";
+
+        },
+
         setMessages: function (ems) {
             $(ems.welcome).html('Good '+DateHelper.getTimeOfTheDayGreeting());
             this.setTime(ems.clock);
@@ -113,18 +123,20 @@ var kingTab = (function (window, $) {
             $(ems.eventTitle).html(currentEvent.event_title);
             $(ems.eventDescription).html(currentEvent.event_description);
             $(ems.eventDialogTitle).html(currentEvent.event_title);
-            $(ems.eventDialogImage).attr("src", this.fullBleedImageUrl(this.currentEvent.event_id));
+            //$(ems.eventDialogImage).attr("src", this.fullBleedImageUrl(this.currentEvent.event_id));
             $(ems.eventDialogUrl).attr("href", this.eventUrl(this.currentEvent.event_id));
 
             this.setEventProducts(ems, currentEvent);
         },
 
         setEventProducts: function(ems, currentEvent) {
-            var allProducts = "";
-            var productTemplate = "<div><a href='#LINK_URL'><img src='#IMG_URL'/></a></div>";
+            var allProducts = "", currentProduct;
+            var productTemplate = "<div class='product'><a href='#LINK_URL'><img src='#IMG_URL'/></a></div>";
 
             for (var i=0, len = currentEvent.products.length; i < len; i++) {
-                allProducts += productTemplate.replace('#LINK_URL', 'http://onekingslane.com').replace('#IMG_URL', 'https://okl-scene7.insnw.net/is/image/OKL/Product_GOH11516_Image_1?wid=60&hei=41');
+                currentProduct = currentEvent.products[i];
+                allProducts += productTemplate.replace('#LINK_URL', this.productEventUrl(currentEvent.event_id, currentProduct.product_id))
+                    .replace('#IMG_URL', this.productImageUrl(currentEvent.products[i]));
             }
             $(ems.eventDialogProducts).html(allProducts);
         },
