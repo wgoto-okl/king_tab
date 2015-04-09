@@ -25,13 +25,18 @@ var kingTab = (function (_$) {
             var key, params = '';
             for (key in IMAGE_CONFIG) {
                 if (IMAGE_CONFIG.hasOwnProperty(key)) {
-                    params += key + '=' + this.prepareImageParam(IMAGE_CONFIG[key]);
+                    params += this.prepareImageParam(key);
                 }
             }
             return params;
         },
 
-        prepareImageParam: function (value) {
+        prepareImageParam: function (key) {
+            return key + '=' + this.prepareImageParamValue(IMAGE_CONFIG[key]) + '&';
+
+        },
+
+        prepareImageParamValue: function (value) {
             if (value instanceof Array) {
                 return value.join(',');
             }
