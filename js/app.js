@@ -1,7 +1,7 @@
 var kingTab = (function (_$) {
     var IMAGE_CONFIG = {
-        wid: 2880,
-        hei: 1800,
+        wid: 1656,
+        hei: 1128,
         fmt: 'jpeg',
         qlt: [90, 0],
         op_sharpen: 0,
@@ -18,7 +18,7 @@ var kingTab = (function (_$) {
         },
 
         setBackgroundImage: function (eventId) {
-            $('#wrapper').css('background','url("' + this.imageUrl(eventId) + '") no-repeat center fixed');
+            $('html').css('background-image','url("' + this.imageUrl(eventId) + '")');
         },
 
         imageUrlParams: function () {
