@@ -18,7 +18,6 @@ King Tab is a One Kings Lane Google Chrome extension for replacing the default n
 * ~~OKL logo on top left~~
 * ~~Welcome message~~
 * ~~Clock~~
-
 * Refresh button for a new event
 * Search
 * Blog integration
