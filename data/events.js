@@ -22,6 +22,11 @@ var EventsManager = (function() {
       event_id: "52227",
       event_title: "PERK UP, Let's get CAFFEINATED!",
       event_description: "Featuring Keurig's revolutionary Rivo machine, these coffee-break essentials are just waiting for some cookies and plenty of conversation.."
+    },
+    {
+      event_id: "51734",
+      event_title: "What’s not to love about blue and white?",
+      event_description: "Both fresh and timeless, it’s a pairing that works with any style. Shop this collection of art, furniture, and more to infuse your own space with this power palette."
     }
 
 

@@ -57,7 +57,7 @@ var kingTab = (function (_$) {
         },
 
         imageUrl: function (eventId) {
-            return 'https://okl2.scene7.com/is/image/OKL/SalesEvent_' + eventId + '_Lifestyle_3?' + this.imageUrlParams();
+            return "images/" + "SalesEvent_" + eventId + "_Lifestyle_3.jpeg";
         },
 
         eventUrl: function (eventId) {
