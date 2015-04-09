@@ -25,7 +25,7 @@ var EventsManager = (function() {
     {
       event_id: "51734",
       event_title: "What's not to love about blue and white?",
-      event_description: "Both fresh and timeless, it'’'s a pairing that works with any style. Shop this collection of art, furniture, and more to infuse your own space with this power palette."
+      event_description: "Both fresh and timeless, it's a pairing that works with any style. Shop this collection of art, furniture, and more to infuse your own space with this power palette."
     }
   ];
 
@@ -37,7 +37,7 @@ var EventsManager = (function() {
 
     getAllEvents: function() {
       return events;
-    },
+    }
 
   }
 
