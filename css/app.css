@@ -315,8 +315,10 @@ input[type="text"]:focus {
     display: inline-block;
     padding: 1em;
     text-align: right;
-    font-size: 1.25em;
+    font-size: 1em;
     font-weight: bold;
     box-shadow: inset 40px 40px 100px 120px rgba(0,0,0,0.06);
     background-color: rgba(100, 100, 100, 0.5);
+    letter-spacing: 2px;
+
 }
