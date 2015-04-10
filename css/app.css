@@ -17,8 +17,21 @@
     src: url('../fonts/ProximaNova/ProximaNova-Semibold.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'MillerBanner';
+    src: url('../fonts/Miller/Miller-Banner-Roman-01.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'MillerBanner-Light';
+    src: url('../fonts/Miller/Miller-Banner-Light-01.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'MillerBanner-Semibold';
+    src: url('../fonts/Miller/Miller-Banner-Semibold-01.ttf') format('truetype');
+}
+
 body {
-    font-family: 'ProximaNovaLight',sans-serif;
+    font-family: 'ProximaNova',sans-serif;
     color: white;
     margin: 0 auto;
     width: 100%;
@@ -28,6 +41,7 @@ body {
 
 body * {
     -webkit-box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
 }
 
 .clear {
@@ -39,12 +53,26 @@ ul {
     padding: 0px;
 }
 
+#center-hr {
+    width: 600px;
+    height: 1px;
+    background-color: rgba(255,255,255,0.5);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-300px);
+}
+
+.title {
+    font-family: 'MillerBanner-Semibold',serif;
+}
+
 .tshadow {
     text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .shadowed {
-    -webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));
+    -webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.9));
 }
 
 input[type="text"] {
@@ -65,7 +93,7 @@ input[type="text"]:focus {
 }
 
 ::-webkit-input-placeholder {
-    color: rgba(255,255,255,0.67);
+    color: rgba(255,255,255,0.75);
 }
 
 #search-input {
@@ -91,8 +119,8 @@ input[type="text"]:focus {
     display: block;
     position: fixed;
     left: 50%;
-    top: 50px;
-    -webkit-transform: translateX(-192px);
+    bottom: 50%;
+    -webkit-transform: translate(-192px, -30px);
 }
 
 #search-wrap {
@@ -110,22 +138,33 @@ input[type="text"]:focus {
 
 #welcome-message {
     position: fixed;
-    top: 0.33em;
-    right: 0.33em;
-    font-size: 1.5em;
+    width: 600px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    font-family: 'MillerBanner-Semibold',serif;
+    font-size: 6em;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-300px, 20px);
 }
 
 #clock {
     position: fixed;
-    top: 1.83em;
-    right: 0.33em;
-    font-size: 1.25em;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    text-align: center;
+    font-size: 2.5em;
+    height: 40px;
+    line-height: 40px;
+    -webkit-transform: translate(-200px, 100px);
 }
 
 #refresh {
     position: fixed;
     top: 0.33em;
-    right: 15em;
+    right: 0.33em;
     display: block;
 }
 
@@ -161,10 +200,19 @@ input[type="text"]:focus {
     padding: 10px 0;
     text-align: center;
     color: #000000;
+    text-shadow: none;
+    border-radius: 5px;
+    opacity: 0.95;
 }
 
 #event-dialog li {
     padding: 5px;
+    opacity: 0.95;
+}
+
+#event-dialog-title {
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 #event-dialog-image {
@@ -174,10 +222,15 @@ input[type="text"]:focus {
 #event-dialog-products {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 #event-dialog-products li {
     padding: 5px;
+}
+
+#event-dialog-products .product {
+    padding: 10px 0;
 }
 
 #instagram {
