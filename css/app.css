@@ -53,8 +53,18 @@ ul {
     padding: 0px;
 }
 
+#center-hr {
+    width: 600px;
+    height: 1px;
+    background-color: rgba(255,255,255,0.5);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-300px);
+}
+
 .title {
-    font-family: 'MillerBanner',serif;
+    font-family: 'MillerBanner-Semibold',serif;
 }
 
 .tshadow {
@@ -62,7 +72,7 @@ ul {
 }
 
 .shadowed {
-    -webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));
+    -webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.9));
 }
 
 input[type="text"] {
@@ -109,8 +119,8 @@ input[type="text"]:focus {
     display: block;
     position: fixed;
     left: 50%;
-    top: 50px;
-    -webkit-transform: translateX(-192px);
+    bottom: 50%;
+    -webkit-transform: translate(-192px, -30px);
 }
 
 #search-wrap {
@@ -128,22 +138,33 @@ input[type="text"]:focus {
 
 #welcome-message {
     position: fixed;
-    top: 0.33em;
-    right: 0.33em;
-    font-size: 1.5em;
+    width: 600px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    font-family: 'MillerBanner-Semibold',serif;
+    font-size: 6em;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-300px, 20px);
 }
 
 #clock {
     position: fixed;
-    top: 1.83em;
-    right: 0.33em;
-    font-size: 1.25em;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    text-align: center;
+    font-size: 2.5em;
+    height: 40px;
+    line-height: 40px;
+    -webkit-transform: translate(-200px, 100px);
 }
 
 #refresh {
     position: fixed;
     top: 0.33em;
-    right: 15em;
+    right: 0.33em;
     display: block;
 }
 
