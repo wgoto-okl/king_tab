@@ -172,7 +172,7 @@ input[type="text"]:focus {
     left: 50%;
     width: 400px;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 3em;
     height: 40px;
     line-height: 40px;
     -webkit-transform: translate(-200px, 110px);
