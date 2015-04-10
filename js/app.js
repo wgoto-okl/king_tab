@@ -164,12 +164,15 @@ var kingTab = (function (window, $) {
                 self.refresh();
             });
 
-            eventElements.eventContainer.on('mouseover', function() {
-                eventElements.eventDialog.show();
+            eventElements.eventContainer.on('mouseenter', function() {
+                eventElements.eventDialog.fadeIn(250, 'swing');
+            });
+
+            eventElements.eventContainer.on('mouseleave', function() {
+                eventElements.eventDialog.fadeOut(250, 'swing');
             });
 
             eventElements.getThisLookBtn.on('click', function() {
-                console.log("this btn");
                 window.location = self.eventUrl(self.currentEvent.event_id);
             });
 
