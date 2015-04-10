@@ -56,15 +56,17 @@ a {
 ul {
     list-style-type: none;
     padding: 0px;
+    margin: 0;
 }
 
 button {
-    padding: 10px;
+    padding: 15px;
     border: 1px solid rgba(0,0,0,0.1);
     border-top: 1px solid rgba(0,0,0,0.07);
     background-color: transparent;
     color: #4F4D4B;
     font-weight: bold;
+    letter-spacing: 2px;
 }
 
 #center-hr {
@@ -208,7 +210,7 @@ input[type="text"]:focus {
     font-size: 14px;
     margin-bottom: 2em;
     line-height: 1.25em;
-    padding: 0 1.5em;
+    padding: 0 2em;
 }
 
 #event-dialog {
@@ -218,7 +220,17 @@ input[type="text"]:focus {
     color: #000000;
     text-shadow: none;
     border-radius: 5px;
-    padding-top: 1em;
+}
+
+#event-dialog::after {
+    content: "";
+    position: absolute;
+    right: 15px;
+    width: 15px;
+    height: 15px;
+    background-color: #F7F7F7;
+    -webkit-transform: rotate(45deg);
+    bottom: 45px;
 }
 
 .event-details {
@@ -264,6 +276,7 @@ input[type="text"]:focus {
 .event-look {
     text-align: right;
     font-size: 1.25em;
+    font-weight: bold;
 }
 
 #instagram {
