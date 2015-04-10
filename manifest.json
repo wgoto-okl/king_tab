@@ -6,5 +6,8 @@
   "chrome_url_overrides": {
     "newtab": "dashboard.html"
   },
+  "permissions": [
+    "https://*/"
+  ],
   "manifest_version": 2
 }
