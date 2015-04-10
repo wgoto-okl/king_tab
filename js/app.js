@@ -148,7 +148,7 @@ var kingTab = (function (window, $) {
 
             controlElements.searchInput.keydown(function (event) {
                 if (event.keyCode === 13) {
-                    window.location = baseUrl + 'search?q=' + input.val().replace(/\s/g, '+');
+                    window.location = baseUrl + 'search?q=' + controlElements.searchInput.val().replace(/\s/g, '+');
                 }
             });
 
