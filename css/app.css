@@ -200,10 +200,19 @@ input[type="text"]:focus {
     padding: 10px 0;
     text-align: center;
     color: #000000;
+    text-shadow: none;
+    border-radius: 5px;
+    opacity: 0.95;
 }
 
 #event-dialog li {
     padding: 5px;
+    opacity: 0.95;
+}
+
+#event-dialog-title {
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 #event-dialog-image {
@@ -213,10 +222,15 @@ input[type="text"]:focus {
 #event-dialog-products {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 #event-dialog-products li {
     padding: 5px;
+}
+
+#event-dialog-products .product {
+    padding: 10px 0;
 }
 
 #instagram {
