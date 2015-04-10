@@ -169,7 +169,7 @@ var EventsManager = (function() {
     {
       event_id: "51789",
       event_title: "Well Read",
-      event_description: "Brainy is the new sexy, they say. We agree when it comes to decor. A curated, cultured mix of books, art, accents,  and furniture creates a smart, sophisticated mood that oozes intelligence and a bit of intrigue—just like a great mind.",
+      event_description: "Brainy is the new sexy, they say. We agree when it comes to decor. A curated, cultured mix of books, art, accents,  and furniture creates a smart, sophisticated mood that oozes intelligence and a bit of intrigue-just like a great mind.",
       products: [
         {
           okl_sku: 'GKQ10321',

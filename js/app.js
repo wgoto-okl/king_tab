@@ -45,6 +45,8 @@ var kingTab = (function (window, $) {
             this.loadEvent(EventsManager.getRandomEvent());
             this.setMessages(textElements);
             this.createEventHandlers();
+
+            $('.event-look-container').fadeIn(3000);
         },
 
         refresh: function () {
