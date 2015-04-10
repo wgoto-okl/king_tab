@@ -67,6 +67,7 @@ button {
     color: #4F4D4B;
     font-weight: bold;
     letter-spacing: 2px;
+    outline: none;
 }
 
 #center-hr {

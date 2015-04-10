@@ -119,7 +119,7 @@ var EventsManager = (function() {
     {
       event_id: "49991",
       event_title: "A BRIGHT Entrance",
-      event_description: "Spring is the perfect time to rethink and refresh the entryway; after all, it’s everyone’s first and last impression of your home (including yours!).",
+      event_description: "Spring is the perfect time to rethink and refresh the entryway; after all, it's everyone's first and last impression of your home (including yours!).",
       products: [
         {
           okl_sku: 'vmf_vendor_IVG_3422007_1420232511765_666085',
@@ -193,7 +193,7 @@ var EventsManager = (function() {
     {
       event_id: "52142",
       event_title: "BRADBURN GALLERY HOME",
-      event_description: "From their Atlanta factory, Fran and Bruce Bradburn filter worldly inspiration through their own unique vision to produce a range of decor that’s as eclectic as it is refined.",
+      event_description: "From their Atlanta factory, Fran and Bruce Bradburn filter worldly inspiration through their own unique vision to produce a range of decor that's as eclectic as it is refined.",
       products: [
         {
           okl_sku: 'TEF10287',
