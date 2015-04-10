@@ -72,7 +72,7 @@ ul {
 }
 
 .shadowed {
-    -webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.9));
+    -webkit-filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.9));
 }
 
 input[type="text"] {
