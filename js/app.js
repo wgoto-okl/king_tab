@@ -103,7 +103,7 @@ var kingTab = (function (window, $) {
         },
 
         setMessages: function (ems) {
-            $(ems.welcome).html('Good '+DateHelper.getTimeOfTheDayGreeting());
+            $(ems.welcome).html('Happy '+DateHelper.getDayName()+'!');
             this.setTime(ems.clock);
         },
 
@@ -157,5 +157,9 @@ $(document).on('ready',function () {
 
     $('#refresh').on('click',function () {
         kingTab.refresh();
+    });
+
+    $('#search-wrap img').on('click',function () {
+        $('#search-input').toggleClass('expanded').focus();
     });
 });

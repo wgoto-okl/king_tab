@@ -170,8 +170,13 @@ var EventsManager = (function() {
 
       getAllEvents: function() {
           return events;
-      }
+      },
 
+      getAllEventIds: function () {
+          return events.map(function (event) {
+              return event.event_id;
+          });
+      }
   }
 
 })();

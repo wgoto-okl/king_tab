@@ -1,5 +1,13 @@
 var DateHelper = (function() {
-
+    var DAY_NAMES = [
+        'Sunday',
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday'
+    ];
 
 
     return {
@@ -19,8 +27,13 @@ var DateHelper = (function() {
             }
         },
 
+        getDayName: function () {
+            var d = new Date();
+            return DAY_NAMES[d.getDay()];
+        },
+
         getCurrentTime: function() {
-            return moment().format("h:mm a");
+            return moment().format("h:mma");
         }
     }
 

@@ -70,13 +70,13 @@ button {
 }
 
 #center-hr {
-    width: 600px;
+    width: 720px;
     height: 1px;
     background-color: rgba(255,255,255,0.5);
     position: fixed;
     top: 50%;
     left: 50%;
-    -webkit-transform: translateX(-300px);
+    -webkit-transform: translateX(-360px);
 }
 
 .title {
@@ -96,8 +96,8 @@ input[type="text"] {
     background: transparent;
     border-bottom: 1px solid rgba(255,255,255,0.5);
     outline: none;
-    margin: 10px 10px 10px 0.33em;
-    padding: 4px 2px 4px 24px;
+    margin: 0;
+    padding: 4px 2px 4px 34px;
     color: white;
     background-color: rgba(0,0,0,0.05);
     transition: border-bottom 0.2s ease, background-color 0.2s ease;
@@ -113,7 +113,15 @@ input[type="text"]:focus {
 }
 
 #search-input {
-    width: 170px;
+    width: 0px;
+    height: 100%;
+    padding: 4px 0;
+    font-size: 1.25em;
+    transition: width 0.3s ease, padding 0.5s ease;
+}
+#search-input.expanded {
+    width: 100%;
+    padding: 4px 2px 4px 34px;
 }
 
 .background {
@@ -136,17 +144,26 @@ input[type="text"]:focus {
     position: fixed;
     left: 50%;
     bottom: 50%;
-    -webkit-transform: translate(-192px, -30px);
+    -webkit-transform: translate(-200px, -30px);
+    width: 400px;
+}
+
+#okl-logo img {
+    width: 100%;
 }
 
 #search-wrap {
     position: fixed;
-    top: 0.33em;
-    left: 0.33em;
+    top: 1em;
+    left: 1em;
+    height: 30px;
+    width: 220px;
 }
 
-#search-wrap svg {
+#search-wrap img {
     position: absolute;
+    cursor:pointer;
+    width: 24px;
     top: 50%;
     left: 0.33em;
     -webkit-transform: translateY(-12px);
@@ -171,17 +188,21 @@ input[type="text"]:focus {
     left: 50%;
     width: 400px;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 3em;
     height: 40px;
     line-height: 40px;
-    -webkit-transform: translate(-200px, 100px);
+    -webkit-transform: translate(-200px, 110px);
 }
 
 #refresh {
     position: fixed;
-    top: 0.33em;
-    right: 0.33em;
+    top: 1em;
+    right: 1em;
     display: block;
+}
+
+#refresh img {
+    width: 24px;
 }
 
 #search-wrap svg path, #refresh svg path {
