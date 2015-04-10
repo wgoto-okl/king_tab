@@ -19,6 +19,12 @@ var kingTab = (function (window, $) {
         clock: $('#clock')
     };
 
+    var controlElements = {
+        magnify: $('#search-wrap').find('img'),
+        searchInput: $('#search-input'),
+        refresh: $('#refresh')
+    };
+
     var eventElements = {
         eventTitle: $('#event-title'),
         eventDescription: $('#event-description'),
@@ -40,13 +46,6 @@ var kingTab = (function (window, $) {
             this.setMessages(textElements);
             this.setEvent(eventElements, this.currentEvent);
             this.createEventHandlers();
-
-            eventElements.eventContainer.on('mouseover', function() {
-                eventElements.eventDialog.show();
-            });
-            eventElements.eventContainer.on('mouseout', function() {
-                eventElements.eventDialog.hide();
-            });
         },
 
         refresh: function () {
@@ -146,11 +145,31 @@ var kingTab = (function (window, $) {
         },
 
         createEventHandlers: function () {
-            var input = $('#search-input');
-            input.keydown(function (event) {
+            var self = this;
+
+            controlElements.searchInput.keydown(function (event) {
                 if (event.keyCode === 13) {
                     window.location = baseUrl + 'search?q=' + input.val().replace(/\s/g, '+');
                 }
+            });
+
+            controlElements.magnify.click(function () {
+                controlElements.searchInput.addClass('expanded').focus();
+                controlElements.searchInput.blur(function () {
+                    controlElements.searchInput.removeClass('expanded');
+                });
+            });
+
+            controlElements.refresh.click(function () {
+                self.refresh();
+            });
+
+            eventElements.eventContainer.on('mouseover', function() {
+                eventElements.eventDialog.show();
+            });
+
+            eventElements.eventContainer.on('mouseout', function() {
+                eventElements.eventDialog.hide();
             });
         }
     };
@@ -158,12 +177,4 @@ var kingTab = (function (window, $) {
 
 $(document).on('ready',function () {
     kingTab.init();
-
-    $('#refresh').on('click',function () {
-        kingTab.refresh();
-    });
-
-    $('#search-wrap img').on('click',function () {
-        $('#search-input').toggleClass('expanded').focus();
-    });
 });
