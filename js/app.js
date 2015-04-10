@@ -46,7 +46,6 @@ var kingTab = (function (window, $) {
             this.setBackgroundImage(this.currentEvent.event_id);
             this.setMessages(textElements);
             this.setEvent(eventElements, this.currentEvent);
-            this.createEventHandlers();
         },
 
         refresh: function () {
@@ -150,7 +149,7 @@ var kingTab = (function (window, $) {
 
             controlElements.searchInput.keydown(function (event) {
                 if (event.keyCode === 13) {
-                    window.location = baseUrl + 'search?q=' + input.val().replace(/\s/g, '+');
+                    window.location = baseUrl + 'search?q=' + controlElements.searchInput.val().replace(/\s/g, '+');
                 }
             });
 
@@ -180,4 +179,5 @@ var kingTab = (function (window, $) {
 
 $(document).on('ready',function () {
     kingTab.init();
+    kingTab.createEventHandlers();
 });
