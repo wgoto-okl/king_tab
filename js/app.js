@@ -187,6 +187,12 @@ var kingTab = (function (window, $) {
     };
 })(window, $);
 
-$(document).on('ready',function () {
+$(document).ready(function () {
     kingTab.init();
+});
+
+$(window).load(function () {
+    $('#init-overlay').fadeOut(function () {
+        this.remove();
+    });
 });
