@@ -42,15 +42,20 @@ var kingTab = (function (window, $) {
 
     return {
         init: function () {
-            this.currentEvent = EventsManager.getRandomEvent();
-            this.setBackgroundImage(this.currentEvent.event_id);
+            this.loadEvent(EventsManager.getRandomEvent());
             this.setMessages(textElements);
-            this.setEvent(eventElements, this.currentEvent);
+            this.createEventHandlers();
         },
 
         refresh: function () {
             BG_NUM++;
-            this.init();
+            this.loadEvent(EventsManager.getNextEvent());
+        },
+
+        loadEvent: function (event) {
+            this.currentEvent = event;
+            this.setBackgroundImage(this.currentEvent.event_id);
+            this.setEvent(eventElements, this.currentEvent);
         },
 
         setBackgroundImage: function (eventId) {
@@ -182,5 +187,4 @@ var kingTab = (function (window, $) {
 
 $(document).on('ready',function () {
     kingTab.init();
-    kingTab.createEventHandlers();
 });
