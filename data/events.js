@@ -251,6 +251,15 @@ var EventsManager = (function() {
           }
       },
 
+      getNextEvent: function () {
+          if (this.curEvent === events.length - 1) {
+              this.curEvent = 0;
+          } else {
+              this.curEvent += 1;
+          }
+          return events[this.curEvent]
+      },
+
       getAllEvents: function() {
           return events;
       },
