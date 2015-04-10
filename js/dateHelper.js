@@ -20,7 +20,7 @@ var DateHelper = (function() {
         },
 
         getCurrentTime: function() {
-            return moment().format("h:mm a");
+            return moment().format("h:mma");
         }
     }
 
