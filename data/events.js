@@ -251,6 +251,11 @@ var EventsManager = (function() {
           }
       },
 
+      getInitialEvent: function() {
+        this.curEvent = 2;
+        return events[2];
+      },
+
       getNextEvent: function () {
           if (this.curEvent === events.length - 1) {
               this.curEvent = 0;

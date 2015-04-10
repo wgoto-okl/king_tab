@@ -43,7 +43,7 @@ var kingTab = (function (window, $) {
 
     return {
         init: function () {
-            this.loadEvent(EventsManager.getRandomEvent());
+            this.loadEvent(EventsManager.getInitialEvent());
             this.setMessages(textElements);
             this.createEventHandlers();
         },
