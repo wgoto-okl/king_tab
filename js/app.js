@@ -45,7 +45,6 @@ var kingTab = (function (window, $) {
             this.setBackgroundImage(this.currentEvent.event_id);
             this.setMessages(textElements);
             this.setEvent(eventElements, this.currentEvent);
-            this.createEventHandlers();
         },
 
         refresh: function () {
@@ -177,4 +176,5 @@ var kingTab = (function (window, $) {
 
 $(document).on('ready',function () {
     kingTab.init();
+    kingTab.createEventHandlers();
 });
