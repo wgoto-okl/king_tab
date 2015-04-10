@@ -98,8 +98,12 @@ var kingTab = (function (window, $) {
         },
 
         productImageUrl: function(product) {
-            return scene7BaseUrl + "Product_" + product.okl_sku + "_Image_1?wid=160&hei=109";
-
+            if (product.is_vintage) {
+                return scene7BaseUrl + product.okl_sku + "?wid=160&hei=109";
+            }
+            else {
+                return scene7BaseUrl + "Product_" + product.okl_sku + "_Image_1?wid=160&hei=109";
+            }
         },
 
         setMessages: function (ems) {
