@@ -33,7 +33,8 @@ var kingTab = (function (window, $) {
         eventDialogTitle: $('#event-dialog-title'),
         eventDialogImage: $('#event-dialog-image'),
         eventDialogUrl: $('.event-dialog-url'),
-        eventDialogProducts: $('#event-dialog-products')
+        eventDialogProducts: $('#event-dialog-products'),
+        getThisLookBtn: $('#get-this-look-btn')
     };
 
     var baseUrl = 'https://www.onekingslane.com/',
@@ -168,9 +169,11 @@ var kingTab = (function (window, $) {
                 eventElements.eventDialog.show();
             });
 
-            eventElements.eventContainer.on('mouseout', function() {
-                eventElements.eventDialog.hide();
+            eventElements.getThisLookBtn.on('click', function() {
+                console.log("this btn");
+                window.location = self.eventUrl(self.currentEvent.event_id);
             });
+
         }
     };
 })(window, $);
